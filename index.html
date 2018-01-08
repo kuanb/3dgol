@@ -9,6 +9,8 @@
 </head>
 <body>
 	<div id="webgl"></div>
+
+
 	<script type="text/javascript">
 		var grid;
 	</script>
@@ -18,10 +20,13 @@
 	<script type='text/javascript' src="js/main.js"></script>
 
 	<script type="text/javascript">
-		setInterval(function(){
+		document. addEventListener ( 'DOMContentLoaded' ,  function(){
+			setInterval(function(){
 			console.log('Running testPt...');
 			testPt(grid);
-		}, 2500);
+			}, 2500);
+		} ,   false );
+		
 	</script>
 </body>
 </html>
