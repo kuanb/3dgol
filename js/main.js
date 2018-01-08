@@ -2,7 +2,9 @@ function init() {
 	var scene = new THREE.Scene();
 	var gui = new dat.GUI();
 	var gridSize = 14;
-	var grid = geoGrid(gridSize);
+	//grid is a global variable
+	grid = geoGrid(gridSize);
+	
 	var min = 2;
 	var max = gridSize-2;
 	var randomValues = parseInt(getRandomInt(1, (Math.pow(gridSize,3)))/4);
