@@ -9,9 +9,19 @@
 </head>
 <body>
 	<div id="webgl"></div>
+	<script type="text/javascript">
+		var grid;
+	</script>
 	<script type='text/javascript' src="js/three.js"></script>
 	<script type='text/javascript' src="js/dat.gui.min.js"></script>
 	<script type='text/javascript' src="js/OrbitControls.js"></script>
 	<script type='text/javascript' src="js/main.js"></script>
+
+	<script type="text/javascript">
+		setInterval(function(){
+			console.log('Running testPt...');
+			testPt(grid);
+		}, 2500);
+	</script>
 </body>
 </html>
