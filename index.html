@@ -13,6 +13,8 @@
 
 	<script type="text/javascript">
 		var grid;
+		var group;
+		var scene;
 	</script>
 	<script type='text/javascript' src="js/three.js"></script>
 	<script type='text/javascript' src="js/dat.gui.min.js"></script>
@@ -20,13 +22,22 @@
 	<script type='text/javascript' src="js/main.js"></script>
 
 	<script type="text/javascript">
+		scene = init();
+
+		var itCount = 0;
+		var itFunc;
 		document. addEventListener ( 'DOMContentLoaded' ,  function(){
-			setInterval(function(){
-			console.log('Running testPt...');
-			testPt(grid);
-			}, 2500);
+			itFunc = setInterval(function(){
+				itCount += 1;
+
+				console.log(`running iteration`);
+				testPt(grid);
+
+				if (itCount > 250) {
+					clearInterval(itFunc);
+				}
+			}, 100);
 		} ,   false );
-		
 	</script>
 </body>
 </html>
